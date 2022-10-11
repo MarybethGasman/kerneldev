@@ -2,7 +2,7 @@
 
 Some scripts set up Linux kernel dev environment quickly.
 
-### prerequisites
+### Prerequisites
 
 -   unix-like environment
 -   qemu, make
