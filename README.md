@@ -1,6 +1,11 @@
 ### Introduction
 
-Some script set up Linux kernel dev environment quickly.
+Some scripts set up Linux kernel dev environment quickly.
+
+### prerequisites
+
+-   unix-like environment
+-   qemu, make
 
 ### Usage
 
