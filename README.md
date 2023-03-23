@@ -3,21 +3,23 @@
 Some scripts set up Linux kernel dev environment quickly.
 
 ### Prerequisites
-
--   unix-like environment
--   qemu, make
+```bash
+sudo apt-get update
+sudo apt-get install -y bison flex libelf-dev cpio build-essential libssl-dev qemu-system-x86
+```
 
 ### Usage
 
 ```sh
-./build.sh && ./launch.sh
+./linux-build.sh # build linux kernel 
+./busybox-build.sh # build busybox
+./initramfs.sh #build initramfs.sh
+./launch.sh # boot
 ```
 
 for debugging kernel, port on 6666
 
-```sh
-./build.sh && ./dbg.sh
-```
+to be done
 
 ### Directories
 
