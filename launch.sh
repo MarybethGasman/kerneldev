@@ -6,6 +6,9 @@
 qemu-system-x86_64 \
     -kernel linux/arch/x86/boot/bzImage \
     -initrd initramfs.img \
-    -append "console=ttyS0 root=/dev/ram init=/init" \
-    -m 2048 \
+    -append "console=ttyS0 root=/dev/ram" \
+    -fsdev local,security_model=passthrough,id=fsdev0,path=share \
+    -device virtio-9p-pci,id=fs0,fsdev=fsdev0,mount_tag=hostshare \
+    -enable-kvm \
+    -m 4G \
 	-nographic 

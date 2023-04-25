@@ -1,3 +1,7 @@
+#sudo apt-get -q update
+#sudo apt-get -q install -y bison flex libelf-dev cpio build-essential libssl-dev qemu-system-x86
+
+
 echo "[+] Building kernel..."
 make -C linux defconfig
 echo "CONFIG_NET_9P=y" >> linux/.config
