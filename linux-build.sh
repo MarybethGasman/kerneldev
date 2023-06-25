@@ -1,8 +1,8 @@
 #sudo apt-get -q update
 #sudo apt-get -q install -y bison flex libelf-dev cpio build-essential libssl-dev qemu-system-x86
-
+#sudo apt install bear
 # export SRC=rsf-linux && ./linux-build.sh
-
+SRC=${SRC:-linux}
 echo "[+] Building kernel..."
 make -C $SRC defconfig
 echo "CONFIG_NET_9P=y" >> $SRC/.config
@@ -33,4 +33,4 @@ echo "CONFIG_DEBUG_FS=y" >> $SRC/.config
 echo "CONFIG_DEBUG_INFO_DWARF4=y" >> $SRC/.config
 echo "CONFIG_DEBUG_INFO_BTF=y" >> $SRC/.config
 echo "CONFIG_FRAME_POINTER=y" >> $SRC/.config
-make -C $SRC -j6 bzImage
+bear -- make -C $SRC -j6 bzImage

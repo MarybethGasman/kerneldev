@@ -11,4 +11,5 @@ qemu-system-x86_64 \
 	-nographic \
 	-monitor none \
 	-S -gdb tcp::6666 -append "console=ttyS0 nokaslr ip=dhcp" \
-	-m 2048
+	-m 4G \
+    -serial mon:stdio

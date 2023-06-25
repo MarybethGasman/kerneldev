@@ -4,3 +4,4 @@
 /fs
 
 *.img
+.cache
